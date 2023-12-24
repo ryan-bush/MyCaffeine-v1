@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		104088C92B389D1300987302 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 104088C82B389D1300987302 /* RevenueCat */; };
+		104088CB2B389D1300987302 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = 104088CA2B389D1300987302 /* RevenueCatUI */; };
+		104088CE2B38A10300987302 /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104088CD2B38A10300987302 /* Paywall.swift */; };
+		104088D12B38A4F200987302 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104088D02B38A4F200987302 /* Extenstions.swift */; };
+		104088D42B38AB5D00987302 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104088D32B38AB5D00987302 /* UserViewModel.swift */; };
+		104088D62B38B8EC00987302 /* SubscriptionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104088D52B38B8EC00987302 /* SubscriptionImage.swift */; };
 		1055ADBE2B1895C900DF302C /* MyCaffeine_v1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1055ADBD2B1895C900DF302C /* MyCaffeine_v1App.swift */; };
 		1055ADC02B1895C900DF302C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1055ADBF2B1895C900DF302C /* ContentView.swift */; };
 		1055ADC42B1895CB00DF302C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1055ADC32B1895CB00DF302C /* Assets.xcassets */; };
@@ -27,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		104088CD2B38A10300987302 /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
+		104088D02B38A4F200987302 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		104088D32B38AB5D00987302 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		104088D52B38B8EC00987302 /* SubscriptionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionImage.swift; sourceTree = "<group>"; };
 		1055ADBA2B1895C900DF302C /* MyCaffeine-v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyCaffeine-v1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1055ADBD2B1895C900DF302C /* MyCaffeine_v1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCaffeine_v1App.swift; sourceTree = "<group>"; };
 		1055ADBF2B1895C900DF302C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,13 +63,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104088C92B389D1300987302 /* RevenueCat in Frameworks */,
 				10F401452B1A1C4B00179683 /* HalfASheet in Frameworks */,
+				104088CB2B389D1300987302 /* RevenueCatUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		104088CC2B38A0F200987302 /* Subscriptions */ = {
+			isa = PBXGroup;
+			children = (
+				104088CD2B38A10300987302 /* Paywall.swift */,
+				104088D52B38B8EC00987302 /* SubscriptionImage.swift */,
+			);
+			path = Subscriptions;
+			sourceTree = "<group>";
+		};
+		104088CF2B38A4DE00987302 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				10F4013F2B19F1C300179683 /* Helpers.swift */,
+				104088D02B38A4F200987302 /* Extenstions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		104088D22B38AB3D00987302 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				104088D32B38AB5D00987302 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		1055ADB12B1895C900DF302C = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				10F4013E2B19F1B600179683 /* Base */,
+				104088D22B38AB3D00987302 /* ViewModels */,
 				1055ADD02B1895E300DF302C /* SwiftData */,
 				1055ADCF2B1895D900DF302C /* Views */,
 				1055ADBD2B1895C900DF302C /* MyCaffeine_v1App.swift */,
@@ -102,6 +141,7 @@
 		1055ADCF2B1895D900DF302C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				104088CC2B38A0F200987302 /* Subscriptions */,
 				1055ADE52B18B75500DF302C /* Home */,
 				1055ADDE2B18ABE700DF302C /* Settings */,
 				1055ADD12B18960E00DF302C /* Drinks */,
@@ -152,7 +192,7 @@
 		10F4013E2B19F1B600179683 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				10F4013F2B19F1C300179683 /* Helpers.swift */,
+				104088CF2B38A4DE00987302 /* Helpers */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -175,6 +215,8 @@
 			name = "MyCaffeine-v1";
 			packageProductDependencies = (
 				10F401442B1A1C4B00179683 /* HalfASheet */,
+				104088C82B389D1300987302 /* RevenueCat */,
+				104088CA2B389D1300987302 /* RevenueCatUI */,
 			);
 			productName = "MyCaffeine-v1";
 			productReference = 1055ADBA2B1895C900DF302C /* MyCaffeine-v1.app */;
@@ -206,6 +248,7 @@
 			mainGroup = 1055ADB12B1895C900DF302C;
 			packageReferences = (
 				10F401432B1A1C4B00179683 /* XCRemoteSwiftPackageReference "HalfASheet" */,
+				104088C72B389D1300987302 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = 1055ADBB2B1895C900DF302C /* Products */;
 			projectDirPath = "";
@@ -235,16 +278,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1055ADC02B1895C900DF302C /* ContentView.swift in Sources */,
+				104088D12B38A4F200987302 /* Extenstions.swift in Sources */,
 				1055ADE42B18AE9200DF302C /* DestinationListingView.swift in Sources */,
+				104088CE2B38A10300987302 /* Paywall.swift in Sources */,
 				1055AE072B18C72600DF302C /* AboutView.swift in Sources */,
 				1055ADE92B18B7B400DF302C /* Log.swift in Sources */,
 				1055ADE02B18ABF300DF302C /* SettingsView.swift in Sources */,
 				1055ADE72B18B75D00DF302C /* HomeView.swift in Sources */,
 				1055ADD32B18961F00DF302C /* MyDrinksView.swift in Sources */,
+				104088D42B38AB5D00987302 /* UserViewModel.swift in Sources */,
 				10F401422B1A0DC600179683 /* LogDrinkView.swift in Sources */,
 				10F401402B19F1C300179683 /* Helpers.swift in Sources */,
 				1055ADE22B18ACB700DF302C /* EditDrinkView.swift in Sources */,
 				1055ADD72B1897E000DF302C /* DrinkSize.swift in Sources */,
+				104088D62B38B8EC00987302 /* SubscriptionImage.swift in Sources */,
 				1055ADD52B18968B00DF302C /* Drink.swift in Sources */,
 				1055ADBE2B1895C900DF302C /* MyCaffeine_v1App.swift in Sources */,
 			);
@@ -469,6 +516,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		104088C72B389D1300987302 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.31.6;
+			};
+		};
 		10F401432B1A1C4B00179683 /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ryan-bush/HalfASheet";
@@ -480,6 +535,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		104088C82B389D1300987302 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104088C72B389D1300987302 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+		104088CA2B389D1300987302 /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 104088C72B389D1300987302 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCatUI;
+		};
 		10F401442B1A1C4B00179683 /* HalfASheet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 10F401432B1A1C4B00179683 /* XCRemoteSwiftPackageReference "HalfASheet" */;

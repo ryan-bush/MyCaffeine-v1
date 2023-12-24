@@ -6,15 +6,37 @@
 //
 
 import SwiftUI
+import RevenueCatUI
 
 struct HomeView: View {
+    
+    @State var isPaywallPresented = false
+    @State var displayPaywall = false
+    @EnvironmentObject var userViewModel: UserViewModel
         
     var body: some View {
         GeometryReader { geo in
             NavigationStack {
                 ZStack {
+                    if !userViewModel.isSubscriptionActive {
+                        VStack (alignment: .leading){
+                            Text("Sign up for our premium")
+                            
+                            Button {
+                                // TODO
+//                                isPaywallPresented = true
+                                displayPaywall = true
+                            } label: {
+                                Text("Let's do it")
+                            }
+                            .padding(10)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                            .foregroundColor(Color.white)
+                        }
+                        .padding(20)
+                    }
                     VStack {
-                        
                         VStack(alignment: .leading) {
                             Text("Today's Drinks")
                                 .font(.headline)
@@ -37,6 +59,12 @@ struct HomeView: View {
                         }
                     }
                 }
+            }
+            .sheet(isPresented: $isPaywallPresented, onDismiss: nil) {
+                Paywall(isPaywallPresented: $isPaywallPresented)
+            }
+            .sheet(isPresented: self.$displayPaywall) {
+                PaywallView(displayCloseButton: true)
             }
         }
     }
